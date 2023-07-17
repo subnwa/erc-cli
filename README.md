@@ -1,0 +1,1 @@
+It is a CLI source that works ergonomically and systematically within the system. These errors are added to the database with customization. In addition, it ensures that the bugs that occur in the system do not create system vulnerabilities.
