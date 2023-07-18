@@ -7,7 +7,6 @@ test
 """
 homepage = "https://github.com/subnwa/erc-cli"
 repository = "https://github.com/subnwa/erc-cli"
-documentation = "https://docs.rs/grex"
 license = "Apache-2.0"
 readme = "README.md"
 edition = "2021"
@@ -15,8 +14,6 @@ categories = ["command-line-utilities", "parsing"]
 keywords = ["pattern", "regex", "regexp"]
 
 
+
 [dependencies]
-deserr = "0.6.0"
-snafu = "0.7.5"
-pgfine = "2.3.0"
-r2d2 = "0.8.10"
+bootloader = "0.9.8"
