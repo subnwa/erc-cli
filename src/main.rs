@@ -25,3 +25,5 @@ mod erc {
         "/some/path/that/does/not/exist"
     }
 }
+
+fn main() {}
