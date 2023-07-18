@@ -18,3 +18,5 @@ keywords = ["pattern", "regex", "regexp"]
 [dependencies]
 deserr = "0.6.0"
 snafu = "0.7.5"
+pgfine = "2.3.0"
+r2d2 = "0.8.10"
