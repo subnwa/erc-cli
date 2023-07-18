@@ -14,11 +14,15 @@ mod erc {
     type Result<T, E = Error> = std::result::Result<T, E>;
 
     fn process_data() -> Result<()> {
-        let path = "config.toml";
+        let path = crate::path::Path::new;
         let configuration = fs::read_to_string(path).context(ReadConfigurationSnafu { path })?;
         let path = unpack_config(&configuration);
         fs::write(&path, b"My complex calculation").context(WriteResultSnafu { path })?;
         Ok(())
+    }
+
+    fn path(path: &str) -> Result<()> {
+        let Path = path.to_owned();
     }
 
     fn unpack_config(data: &str) -> &str {
