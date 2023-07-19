@@ -1,20 +1,9 @@
-static HELLO: &[u8] = b"Hello World!";
+use std::any::Any;
 
-pub extern "C" fn _start() -> ! {
-    let vga_buffer = 0xb8000 as *mut u8;
+mod manager;
 
-    for (i, &byte) in HELLO.iter().enumerate() {
-        unsafe {
-            *vga_buffer.offset(i as isize * 2) = byte;
-            *vga_buffer.offset(i as isize * 2 + 1) = 0xb;
-        }
-    }
+fn main() {
+    env_logger::Builder::from_env(env_logger::Env::default().default_filter_or("info")).init();
 
-    loop {}
-}
-
-fn main () {
-    loop {
-        _start()
-    }
+    let state = manager::Manager::new();
 }
