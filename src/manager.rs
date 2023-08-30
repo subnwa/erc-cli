@@ -1,5 +1,5 @@
-pub use std::os::linux::rawttt;
-
+#[repr(transparent)]
+pub struct SendFlags(_);
 pub struct Unlocked;
 
 
